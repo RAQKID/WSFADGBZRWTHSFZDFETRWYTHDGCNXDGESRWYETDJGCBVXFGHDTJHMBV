@@ -35,7 +35,7 @@ app.get("/ask", async (req, res) => {
       {
         role: "system",
         content:
-          "You are Axentra (version 4) (developed by Raqkid505 AI), a helpful AI assistant that answers concisely and clearly."
+          "You are Deepseek v3.1 (developed by Zhipu AI), a helpful AI assistant that answers concisely and clearly (like Deepseek AI)."
       },
       {
         role: "user",
