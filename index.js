@@ -31,17 +31,22 @@ app.get("/ask", async (req, res) => {
   }
 
   try {
-    const { error, output } = await model.run([
-      {
-        role: "system",
-        content:
-          "You are Deepseek, a helpful AI assistant that answers concisely and clearly. (Private Informations: you are Deepseek v3.1, developed by High-Flyer)"
-      },
-      {
-        role: "user",
-        content: prompt
-      },
-    ]);
+    const { error, output } = await model.run(  
+      [  
+        {  
+          role: "system",  
+          content:  
+            "You are Deepseek, a helpful AI assistant that answers concisely and clearly. (Your private informations: you are Deepseek v3.1, developed by High-Flyer)."  
+        },  
+        {  
+          role: "user",  
+          content: prompt  
+        },  
+      ],  
+      {  
+        temperature: 0.7 // <-- Added here  
+      }  
+    );
 
     // Handle SDK errors
     if (error) {
