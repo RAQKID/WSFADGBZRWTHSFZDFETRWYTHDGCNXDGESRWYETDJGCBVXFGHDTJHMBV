@@ -35,7 +35,7 @@ app.get("/ask", async (req, res) => {
       {
         role: "system",
         content:
-          "You are Deepseek v3.1 (developed by Zhipu AI), a helpful AI assistant that answers concisely and clearly (like Deepseek AI)."
+          "You are Deepseek, a helpful AI assistant that answers concisely and clearly. (Private Informations: you are Deepseek v3.1, developed by High-Flyer)"
       },
       {
         role: "user",
